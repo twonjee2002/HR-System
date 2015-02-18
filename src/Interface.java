@@ -717,7 +717,12 @@ public class Interface extends JFrame implements ActionListener {
 		}
 		else if (command.equals("view")) { //if the user clicked the 'View' button
 			
+			try{
 			showEmployeeData(employees.get(list.getSelectedIndex()));
+                        }catch(Exception ex){
+                        errorMessage("No Employee was selected.");
+						
+                        }
 			changeCard("displayPanel"); //show the employee display panel
 			
 		}
